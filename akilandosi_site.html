@@ -310,14 +310,15 @@
     <section id="signup">
       <h2 style="margin-bottom:12px">Sign Up</h2>
       <div class="card">
-        <form onsubmit="handleSignup(event)">
-          <label>Name</label><input type="text" required>
-          <label style="margin-top:10px">Email</label><input type="email" required>
-          <label style="margin-top:10px">Date of Birth</label><input type="date" required>
-          <label style="margin-top:10px">Address</label><textarea rows="3" required></textarea>
-          <label style="margin-top:10px">Phone Number</label><input type="tel" required>
-          <label style="margin-top:10px">Password</label><input type="password" required>
-          <label style="margin-top:10px">Confirm Password</label><input type="password" required>
+        <form onsubmit="handleSignup(event)" data-netlify="true" name="signup">
+          <input type="hidden" name="form-name" value="signup" />
+          <label>Name</label><input name="name" type="text" required>
+          <label style="margin-top:10px">Email</label><input name="email" type="email" required>
+          <label style="margin-top:10px">Date of Birth</label><input name="dob" type="date" required>
+          <label style="margin-top:10px">Address</label><textarea name="address" rows="3" required></textarea>
+          <label style="margin-top:10px">Phone Number</label><input name="phone" type="tel" required>
+          <label style="margin-top:10px">Password</label><input name="password" type="password" required>
+          <label style="margin-top:10px">Confirm Password</label><input name="confirmPassword" type="password" required>
           <div style="margin-top:10px;display:flex;justify-content:flex-end">
             <button type="submit" class="cta">Sign Up</button>
           </div>
